@@ -1,0 +1,151 @@
+
+@viewport {
+    zoom: 1.0;
+    width: extent-to-zoom;
+}
+
+@-ms-viewport {
+    zoom: 1.0;
+    width: extent-to-zoom;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    outline: none;
+}
+
+/* ------------ */
+
+::selection {
+    background-color: transparent;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    cursor: default;
+}
+
+/* --------------------------------------------- HEADER --------------------------------------------- */
+header {
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: deepskyblue;
+    border-bottom: 1px solid skyblue;
+    width: 100%;
+    height: 2em;
+}
+
+h1 {
+    font-size: 1.3em;
+    padding-top: 3px;
+}
+
+/* --------------------------------------------- GAME INFO --------------------------------------------- */
+.info-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.info {
+    text-align: center;
+    background-color: rgb(240, 240, 240);
+    width: 300px;
+    padding: 1em 0;
+    border-radius: 0.5em;
+}
+
+/* --------------------------------------------- RESET --------------------------------------------- */
+.reset-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.reset {
+    background-color: rgb(73, 219, 207);
+    color: white;
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
+
+/* --------------------------------------------- GAMEBOARD --------------------------------------------- */
+.gameboard-container {
+    display: flex;
+    justify-content: center;
+}
+
+.gameboard {
+    width: 300px;
+    height: 300px;
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+        "one two three"
+        "four five six"
+        "seven eight nine";
+    column-gap: 10px;    
+    row-gap: 10px;
+}
+
+.one {
+    grid-area: one;
+}
+.two {
+    grid-area: two;
+}
+.three {
+    grid-area: three;
+}
+.four {
+    grid-area: four;
+}
+.five {
+    grid-area: five;
+}
+.six {
+    grid-area: six;
+}
+.seven {
+    grid-area: seven;
+}
+.eight {
+    grid-area: eight;
+}
+.nine {
+    grid-area: nine;
+}
+
+.space {
+    background-color: skyblue;
+    position:relative;
+}
+
+.draw-one, .draw-two, .draw-three,
+.draw-four, .draw-five, .draw-six,
+.draw-seven, .draw-eight, .draw-nine {
+    color: rgb(255, 215, 177);
+    font-weight: bold;
+    font-size: 9em;
+    position: absolute;
+    top: -54px;
+    left: 3px;
+}
