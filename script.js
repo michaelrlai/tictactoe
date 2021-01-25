@@ -50,7 +50,7 @@ const gameBoard = (() => {
         }
     };
     
-    const checkTurn = () => {
+    const checkTurn = () => { // Checks whose turn it is, so can be displayed
         if (sign === "x") return "PLAYER ONE";
         else if (sign === "o") return "PLAYER TWO";
     };
@@ -74,7 +74,6 @@ const displayController = (() => {
     let sign = "&times;"
 
     const display = (message) => {
-
         document.querySelector(".info-text").textContent = message;
     };
 

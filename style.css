@@ -68,6 +68,7 @@ h1 {
     flex-direction: vertical;
     justify-content: center;
     background-color: rgb(230, 230, 230);
+    border: 1px solid rgb(209, 209, 209);
     width: 300px;
     padding: 12px;
     border-radius: 0.5em;
@@ -86,6 +87,7 @@ h1 {
 
 .reset {
     background-color: rgb(73, 219, 207);
+    border: 1px solid rgb(67, 204, 193);
     color: white;
     padding: 0.5em;
     border-radius: 0.5em;
@@ -144,6 +146,7 @@ h1 {
 .space {
     background-color: skyblue;
     position:relative;
+    border: 1px solid rgb(120, 191, 219);
 }
 
 .draw-zero, .draw-one, .draw-two,
@@ -156,4 +159,5 @@ h1 {
     top: -54px;
     left: 3px;
     pointer-events: none;
+    -webkit-text-stroke: 2px rgb(253, 200, 150);
 }
