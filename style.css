@@ -67,7 +67,7 @@ h1 {
     text-align: center;
     background-color: rgb(240, 240, 240);
     width: 300px;
-    padding: 1em 0;
+    padding: 2em 0;
     border-radius: 0.5em;
 }
 
@@ -99,15 +99,19 @@ h1 {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas: 
-        "one two three"
-        "four five six"
-        "seven eight nine";
+        "zero one two"
+        "three four five"
+        "six seven eight";
     column-gap: 10px;    
     row-gap: 10px;
 }
 
+.zero {
+    grid-area: zero;
+}
 .one {
     grid-area: one;
+
 }
 .two {
     grid-area: two;
@@ -130,22 +134,20 @@ h1 {
 .eight {
     grid-area: eight;
 }
-.nine {
-    grid-area: nine;
-}
 
 .space {
     background-color: skyblue;
     position:relative;
 }
 
-.draw-one, .draw-two, .draw-three,
-.draw-four, .draw-five, .draw-six,
-.draw-seven, .draw-eight, .draw-nine {
+.draw-zero, .draw-one, .draw-two,
+.draw-three, .draw-four, .draw-five,
+.draw-six, .draw-seven, .draw-eight {
     color: rgb(255, 215, 177);
     font-weight: bold;
     font-size: 9em;
     position: absolute;
     top: -54px;
     left: 3px;
+    pointer-events: none;
 }
